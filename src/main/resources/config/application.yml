@@ -1,0 +1,4 @@
+spring:  application:    name: QLTuoc  profiles:    active: dev
+  datasource:    url: jdbc:postgresql://localhost:5432/qlthuoc
+    username: postgres    password: 12345678x@X    hikari:      minimum-idle: 10      maximum-pool-size: 10      connection-timeout: 3000
+    driver-class-name: org.postgresql.Driver  jpa:    database-platform: org.hibernate.dialect.PostgreSQL9Dialect  liquibase:    change-log: classpath:config/liquibase/changelog-master.xml  resources:    chain:      enabled: truelogging:  level:    org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl: ERROR    com.vn.ctu.qlt.app: DEBUG    ROOT: DEBUG management:  security:    enabled: true
